@@ -12,7 +12,9 @@ const App = ({ data }) => {
         <h1>{data.hi}</h1>
         <ul>
           {data.resolutions.map(resolution => (
-            <li key={resolution._id}>{resolution.name}</li>
+            <li key={resolution._id}>
+              {resolution.name} {resolution.title}
+            </li>
           ))}
         </ul>
       </div>
@@ -26,6 +28,7 @@ const hiQuery = gql`
     resolutions {
       _id
       name
+      title
     }
   }
 `;

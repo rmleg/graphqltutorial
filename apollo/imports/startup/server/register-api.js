@@ -13,6 +13,8 @@ type Query {
 }
 `;
 
+console.log(ResolutionSchema);
+
 const typeDefs = [testSchema, ResolutionSchema];
 
 const hiResolver = {
@@ -22,6 +24,8 @@ const hiResolver = {
     }
   }
 };
+
+console.log(typeDefs);
 
 const resolvers = merge(hiResolver, ResolutionResolvers);
 
