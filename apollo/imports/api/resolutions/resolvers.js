@@ -24,5 +24,12 @@ export default {
     resolutions() {
       return Resolutions.find({}).fetch();
     }
+  },
+
+  Mutation: {
+    createResolution() {
+      //insert here
+      console.log("in the mutation");
+    }
   }
 };

@@ -1,5 +1,12 @@
+"""
+what it's called, what's in it, what that thing is or returns
+"""
 type Resolution {
   _id: String!
   name: String!
   title: String
+}
+
+type Mutation {
+  createResolution: Resolution
 }
