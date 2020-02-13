@@ -22,9 +22,9 @@ const hiResolver = {
     }
   }
 };
-//test
 
 const resolvers = merge(hiResolver, ResolutionResolvers);
+// console.log(resolvers);
 
 const schema = makeExecutableSchema({
   typeDefs,

@@ -18,6 +18,7 @@ import Resolutions from "./resolutions";
 //const res = Resolutions.find({}).fetch();
 
 //console.log(res);
+//help
 
 export default {
   Query: {
@@ -27,9 +28,10 @@ export default {
   },
 
   Mutation: {
-    createResolution() {
+    createResolution(obj, { name }, context) {
       //insert here
-      console.log("in the mutation");
+      const newResolutionID = Resolutions.insert({ name });
+      return Resolutions.findOne(newResolutionID);
     }
   }
 };
